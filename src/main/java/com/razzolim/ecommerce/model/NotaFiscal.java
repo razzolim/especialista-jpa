@@ -4,26 +4,29 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 @Entity
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@Table(name = "cliente")
-public class Cliente {
+@Table(name = "nota_fiscal")
+public class NotaFiscal {
 
     @Id
     @EqualsAndHashCode.Include
     private Integer id;
 
-    private String nome;
+    @Column(name = "pedido_id")
+    private Integer pedidoId;
 
-    @Enumerated(EnumType.STRING) // utiliza o nome do enum como string na hr persistir
-    private SexoCliente sexoCliente;
+    private String xml;
+
+    @Column(name = "data_emissao")
+    private Date dataEmissao;
 
 }
