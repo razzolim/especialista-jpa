@@ -31,3 +31,9 @@ hs_err_pid*
 /.idea/runConfigurations.xml
 /.idea/uiDesigner.xml
 /.idea/vcs.xml
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
