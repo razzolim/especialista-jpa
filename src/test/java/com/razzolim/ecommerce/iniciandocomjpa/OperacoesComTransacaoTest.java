@@ -28,7 +28,7 @@ public class OperacoesComTransacaoTest extends EntityManagerTest {
     @Test
     public void mostrarDiferençaPersistMerge() {
         var produtoPersist = new Produto();
-        produtoPersist.setId(4);
+//        produtoPersist.setId(4); comentado pq estamos utilizando IDENTITY
         produtoPersist.setNome("Smartphone One Plus");
         produtoPersist.setDescricao("O processador mais rápido.");
         produtoPersist.setPreco(new BigDecimal(2000));
